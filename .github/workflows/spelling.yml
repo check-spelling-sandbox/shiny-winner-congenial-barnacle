@@ -188,7 +188,6 @@ jobs:
             cspell1:typescript/typescript.txt
             census:census-5.txt
             census:census-7.txt
-            census:census-10.txt
           extra_dictionaries: |
             cspell1:software-terms/softwareTerms.txt
 
