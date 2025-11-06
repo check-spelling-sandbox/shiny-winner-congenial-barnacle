@@ -203,7 +203,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup && github.event_name == 'push'
     steps:
       - name: comment
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling-sandbox/check-spelling@prerelease
         with:
           checkout: true
           spell_check_this: check-spelling/spell-check-this@prerelease
@@ -221,7 +221,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup && contains(github.event_name, 'pull_request')
     steps:
       - name: comment
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling-sandbox/check-spelling@prerelease
         with:
           checkout: true
           spell_check_this: check-spelling/spell-check-this@prerelease
@@ -246,7 +246,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: apply spelling updates
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling-sandbox/check-spelling@prerelease
         with:
           experimental_apply_changes_via_bot: 1
           checkout: true
